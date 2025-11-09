@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    background-image: url('love background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    position: relative;
+}
+
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #d63384;
+}
+
+#input-section h1 {
+    font-size: 2.5rem;
+}
+
+#message-section h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #d63384;
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 300px;
+}
+
+input:focus {
+    border-color: #a61e4d;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #d63384, #a61e4d);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #a61e4d, #d63384);
+}
+
+.hearts-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.heart {
+    position: absolute;
+    font-size: 0px;
+    animation: growHeart 2s ease-in-out forwards;
+    opacity: 0;
+}
+
+.heart:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0.2s;
+}
+
+.heart:nth-child(2) {
+    top: 20%;
+    right: 20%;
+    animation-delay: 0.4s;
+}
+
+.heart:nth-child(3) {
+    bottom: 20%;
+    left: 10%;
+    animation-delay: 0.6s;
+}
+
+.heart:nth-child(4) {
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 0.8s;
+}
+
+.heart:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 1s;
+}
+
+.heart:nth-child(6) {
+    top: 5%;
+    left: 50%;
+    animation-delay: 1.2s;
+}
+
+.heart:nth-child(7) {
+    top: 30%;
+    left: 5%;
+    animation-delay: 1.4s;
+}
+
+.heart:nth-child(8) {
+    top: 70%;
+    right: 5%;
+    animation-delay: 1.6s;
+}
+
+.heart:nth-child(9) {
+    bottom: 5%;
+    left: 50%;
+    animation-delay: 1.8s;
+}
+
+.heart:nth-child(10) {
+    top: 40%;
+    right: 30%;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(11) {
+    top: 60%;
+    left: 30%;
+    animation-delay: 2.2s;
+}
+
+.heart:nth-child(12) {
+    top: 80%;
+    left: 80%;
+    animation-delay: 2.4s;
+}
+
+@keyframes growHeart {
+    0% {
+        font-size: 0px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        font-size: 3rem;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#proposal-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #d63384;
+}
+
+#proposal-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#proposal-section button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #d63384;
+    border-radius: 25px;
+    background: white;
+    color: #d63384;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#proposal-section button:hover {
+    background: #d63384;
+    color: white;
+}
+
+#questions-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #d63384;
+}
+
+#questions-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#questions-section .question {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+#questions-section label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+#questions-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 2px solid #d63384;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
+    min-height: 60px;
+}
+
+#questions-section textarea:focus {
+    border-color: #a61e4d;
+}
+
+#questions-section button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #d63384, #a61e4d);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+#questions-section button:hover {
+    background: linear-gradient(135deg, #a61e4d, #d63384);
+}
+
+#response-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #d63384;
+    margin-top: 20px;
+}
+
+#response-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#response-section button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #d63384;
+    border-radius: 25px;
+    background: white;
+    color: #d63384;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#response-section button:hover {
+    background: #d63384;
+    color: white;
+}
+
+.final-yes-message {
+    color: #d10068;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+}
+
+.final-yes-paragraph {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+        padding: 10px;
+        margin: 5px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    #input-section h1 {
+        font-size: 1.8rem;
+    }
+    #message-section h1 {
+        font-size: 2.5rem;
+    }
+    input, button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    .hearts-container {
+        height: 120px;
+    }
+    @keyframes growHeart {
+        100% {
+            font-size: 1.5rem;
+        }
+    }
+    #questions-section h2, #response-section h2 {
+        font-size: 1.5rem;
+    }
+    #questions-section label {
+        font-size: 1.3rem !important;
+        line-height: 1.5;
+        word-wrap: break-word;
+        hyphens: auto;
+        margin-bottom: 15px;
+        padding: 0 5px;
+        color: #000 !important;
+        font-weight: 500;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+    #questions-section textarea {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    #questions-section button, #response-section button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+        margin: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #input-section h1 {
+        font-size: 2.2rem;
+    }
+    #message-section h1 {
+        font-size: 3rem;
+    }
+    input, button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+    .hearts-container {
+        height: 150px;
+    }
+    @keyframes growHeart {
+        100% {
+            font-size: 2rem;
+        }
+    }
+    #questions-section h2, #response-section h2 {
+        font-size: 1.8rem;
+    }
+    #questions-section textarea {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    #questions-section button, #response-section button {
+        font-size: 1.1rem;
+        padding: 9px 18px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+    }
+    #questions-section .question {
+        max-width: 450px;
+    }
+}

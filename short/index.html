@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Message</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="input-section">
+            <h1>Enter Your Name</h1>
+            <form id="name-form">
+                <input type="text" id="name-input" placeholder="Your name" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="message-section" style="display: none;">
+            <h1 id="message"></h1>
+            <div class="hearts-container">
+                <div class="heart">❤️</div>
+                <div class="heart">💖</div>
+                <div class="heart">💕</div>
+                <div class="heart">💗</div>
+                <div class="heart">💓</div>
+                <div class="heart">💝</div>
+                <div class="heart">💟</div>
+                <div class="heart">💞</div>
+                <div class="heart">💘</div>
+                <div class="heart">💝</div>
+                <div class="heart">💖</div>
+                <div class="heart">💕</div>
+            </div>
+            <div id="questions-section" style="display: none;">
+                <h2>Questions about Richard</h2>
+                <form id="answers-form" action="https://formspree.io/f/mwpaeogq" method="POST">
+                    <input type="hidden" name="name" id="hidden-name">
+                    <div class="question">
+                        <label for="like_most">What do you like most about Richard?</label>
+                        <textarea id="like_most" name="like_most_about_richard" rows="3" required></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="annoying">What makes Richard annoying sometimes?</label>
+                        <textarea id="annoying" name="annoying_about_richard" rows="3" required></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="smile">What’s one thing Richard does that makes you smile?</label>
+                        <textarea id="smile" name="thing_that_makes_smile" rows="3" required></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="memory">What’s your favorite memory with Richard?</label>
+                        <textarea id="memory" name="favorite_memory" rows="3" required></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="change">What would you change about Richard (if anything)?</label>
+                        <textarea id="change" name="change_about_richard" rows="3" required></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="different">What makes Richard different from other guys?</label>
+                        <textarea id="different" name="different_from_other_guys" rows="3" required></textarea>
+                    </div>
+                    <div class="question">
+                        <label>Would you go on a date with Richard if he asked?</label>
+                        <input type="radio" id="date-yes" name="date" value="yes" required>
+                        <label for="date-yes">Yes</label>
+                        <input type="radio" id="date-no" name="date" value="no" required>
+                        <label for="date-no">No</label>
+                    </div>
+                    <div id="date-conditional" style="display: none;">
+                        <div class="question">
+                            <label for="date-why">Why or why not?</label>
+                            <textarea id="date-why" name="date_why" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <label for="never_stop">What’s one thing Richard should never stop doing?</label>
+                        <textarea id="never_stop" name="never_stop_doing" rows="3" required></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="three_words">Describe Richard in three words.</label>
+                        <textarea id="three_words" name="describe_three_words" rows="2" required></textarea>
+                    </div>
+                    <button type="submit">Submit Answers</button>
+                </form>
+            </div>
+            <div id="response-section" style="display: none;">
+                <h2 id="response-message"></h2>
+                <form id="relationship-form" action="https://formspree.io/f/mwpaeogq" method="POST">
+                    <input type="hidden" name="name" id="relationship-hidden-name">
+                    <button type="submit" name="answer" value="Yes">Yes 💕</button>
+                    <button type="submit" name="answer" value="No">No 😢</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
